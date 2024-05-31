@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://inspiracionconstante.com/sitemap.xml
