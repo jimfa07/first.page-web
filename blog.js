@@ -1,36 +1,33 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const articles = [
+document.addEventListener('DOMContentLoaded', () => {
+    const posts = [
         {
-            title: "Primer Artículo del Blog",
-            content: "Este es el contenido de tu primer artículo. Aquí puedes escribir sobre superación personal, motivación, disciplina, y más.",
-            link: "#"
+            title: "El Camino al Éxito",
+            content: "El éxito no es el destino, sino el viaje. A lo largo de este viaje, enfrentaremos desafíos y adversidades, pero cada paso nos acerca más a nuestras metas. La clave está en la perseverancia y la disciplina."
         },
         {
-            title: "Segundo Artículo del Blog",
-            content: "Este es el contenido de tu segundo artículo. Aquí puedes continuar con temas relacionados a tu enfoque.",
-            link: "#"
+            title: "La Importancia de la Disciplina",
+            content: "La disciplina es la base de todo éxito duradero. Sin disciplina, las metas se vuelven solo sueños inalcanzables. Es importante establecer rutinas y hábitos que nos lleven hacia nuestros objetivos."
+        },
+        {
+            title: "Motivación Diaria",
+            content: "La motivación puede ser efímera, pero la inspiración constante nos mantiene en el camino. Rodéate de personas y entornos que te impulsen a ser mejor cada día."
         }
-        // Añadir más artículos aquí
     ];
 
-    const blogContent = document.getElementById("blog-content");
+    const blogPostsContainer = document.getElementById('blog-posts');
 
-    articles.forEach(article => {
-        const articleElement = document.createElement("article");
-        const titleElement = document.createElement("h3");
-        titleElement.textContent = article.title;
+    posts.forEach(post => {
+        const postElement = document.createElement('article');
 
-        const contentElement = document.createElement("p");
-        contentElement.textContent = article.content;
+        const postTitle = document.createElement('h3');
+        postTitle.textContent = post.title;
 
-        const linkElement = document.createElement("a");
-        linkElement.textContent = "Leer más";
-        linkElement.href = article.link;
+        const postContent = document.createElement('p');
+        postContent.textContent = post.content;
 
-        articleElement.appendChild(titleElement);
-        articleElement.appendChild(contentElement);
-        articleElement.appendChild(linkElement);
+        postElement.appendChild(postTitle);
+        postElement.appendChild(postContent);
 
-        blogContent.appendChild(articleElement);
+        blogPostsContainer.appendChild(postElement);
     });
 });
