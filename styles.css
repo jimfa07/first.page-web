@@ -25,3 +25,37 @@ article p {
     line-height: 1.5;
     text-align: justify;
 }
+/* Estilos para la página del blog */
+main h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+article {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+article h3 {
+    margin-top: 0;
+}
+
+article p {
+    line-height: 1.5;
+    text-align: justify;
+}
+
+article a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+article a:hover {
+    text-decoration: underline;
+}
