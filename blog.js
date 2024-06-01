@@ -11,6 +11,14 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             title: "Motivación Diaria",
             content: "La motivación puede ser efímera, pero la inspiración constante nos mantiene en el camino. Rodéate de personas y entornos que te impulsen a ser mejor cada día."
+        },
+        {
+            title: "Desarrollo Personal y Negocios",
+            content: "El desarrollo personal es crucial para el éxito en los negocios. Invertir en uno mismo, adquirir nuevas habilidades y conocimientos, y mantener una mentalidad positiva son fundamentales para prosperar en el mundo empresarial."
+        },
+        {
+            title: "Ejemplos de Superación Personal",
+            content: "Historias inspiradoras de personas que han superado grandes obstáculos en su vida. Estos ejemplos nos muestran que con determinación y esfuerzo, cualquier meta es alcanzable."
         }
     ];
 
