@@ -1,165 +1,155 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    text-align: center;
-    background-color: #f0f0f0;
+    background: #f4f4f4;
+    color: #333;
 }
 
 header {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-}
-
-main {
-    margin: 20px;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-}
-/* Reglas generales para el cuerpo del artículo */
-article p {
-    line-height: 1.5;
-    text-align: justify;
-}
-/* Estilos para la página del blog */
-main h2 {
+    background: #35424a;
+    color: #fff;
+    padding: 20px 0;
     text-align: center;
-    margin-top: 20px;
 }
 
-article {
-    margin: 20px auto;
-    max-width: 800px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
 }
 
-article h3 {
-    margin-top: 0;
+nav ul {
+    padding: 0;
+    list-style: none;
+    background: #35424a;
+    display: flex;
+    justify-content: center;
+    margin: 0;
 }
 
-article p {
-    line-height: 1.5;
-    text-align: justify;
+nav ul li {
+    margin: 0 15px;
 }
 
-article a {
-    display: inline-block;
-    margin-top: 10px;
-    color: #1e90ff;
+nav ul li a {
+    color: #fff;
     text-decoration: none;
+    font-size: 1.1em;
 }
 
-article a:hover {
+nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Estilos para la página de contacto */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 2em;
+    margin-top: 0;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #35424a;
+    color: #fff;
+    margin-top: 20px;
+}
+
 form {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    max-width: 600px;
-    margin: 0 auto;
 }
 
-label {
-    font-weight: bold;
-}
-
-/* Estilos para el formulario de suscripción */
-#subscribe-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin: 0 auto;
-    gap: 10px;
-}
-
-#subscribe-form input, #subscribe-form button {
+form input, form button {
     padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background: #35424a;
+    color: #fff;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #45a049;
+}
+
+/* Blog post styles */
+#blog-posts article {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 5px;
 }
 
-#subscribe-form button {
-    background-color: #1e90ff;
-    color: white;
-    cursor: pointer;
+#blog-posts h3 {
+    margin-top: 0;
 }
 
-#subscribe-form button:hover {
-    background-color: #0d6efd;
-}
-
-#subscribe-message {
-    margin-top: 20px;
-    font-size: 1.2em;
-    text-align: center;
-    color: green;
-}
-
-/* Estilos para la sección de comentarios */
+/* Comment section styles */
 #comments {
-    margin-top: 20px;
-    padding: 10px;
-    border-top: 1px solid #ddd;
+    margin-top: 40px;
 }
 
-#comment-form {
+#comments h3 {
+    margin-bottom: 10px;
+}
+
+#comments form {
+    margin-bottom: 20px;
+}
+
+#comments p {
+    background: #e4e4e4;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Subscribe section styles */
+#subscribe {
+    background: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#subscribe h3 {
+    margin-bottom: 20px;
+}
+
+#subscribe form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    max-width: 600px;
-    margin: 0 auto;
+    align-items: center;
 }
 
-#comment-form textarea {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+#subscribe input {
+    width: 70%;
+    max-width: 300px;
+    margin-bottom: 10px;
 }
 
-#comment-form button {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #1e90ff;
-    color: white;
-    cursor: pointer;
-}
-
-#comment-form button:hover {
-    background-color: #0d6efd;
-}
-
-#comment-list p {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-}
-
-input, textarea {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-button {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #1e90ff;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0d6efd;
+#subscribe button {
+    width: 70%;
+    max-width: 300px;
 }

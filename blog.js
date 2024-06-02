@@ -40,26 +40,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
- // Funcionalidad del formulario de suscripción
- const subscribeForm = document.getElementById('subscribe-form');
- const subscribeMessage = document.getElementById('subscribe-message');
+const subscribeForm = document.getElementById('subscribe-form');
+const subscribeMessage = document.getElementById('subscribe-message');
 
- subscribeForm.addEventListener('submit', (e) => {
-     e.preventDefault();
-     const email = document.getElementById('email').value;
-     subscribeMessage.textContent = `Gracias por suscribirte con ${email}.`;
- });
+subscribeForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = document.getElementById('email').value;
+    subscribeMessage.textContent = `Gracias por suscribirte con ${email}.`;
+});
 
- // Funcionalidad de los comentarios
- const commentForm = document.getElementById('comment-form');
- const commentList = document.getElementById('comment-list');
+const commentForm = document.getElementById('comment-form');
+const commentList = document.getElementById('comment-list');
 
- commentForm.addEventListener('submit', (e) => {
-     e.preventDefault();
-     const comment = document.getElementById('comment').value;
-     const commentElement = document.createElement('p');
-     commentElement.textContent = comment;
-     commentList.appendChild(commentElement);
-     commentForm.reset();
- });
+commentForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const comment = document.getElementById('comment').value;
+    const commentElement = document.createElement('p');
+    commentElement.textContent = comment;
+    commentList.appendChild(commentElement);
+    commentForm.reset();
 });
