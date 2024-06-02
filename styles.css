@@ -73,6 +73,77 @@ label {
     font-weight: bold;
 }
 
+/* Estilos para el formulario de suscripción */
+#subscribe-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+#subscribe-form input, #subscribe-form button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#subscribe-form button {
+    background-color: #1e90ff;
+    color: white;
+    cursor: pointer;
+}
+
+#subscribe-form button:hover {
+    background-color: #0d6efd;
+}
+
+#subscribe-message {
+    margin-top: 20px;
+    font-size: 1.2em;
+    text-align: center;
+    color: green;
+}
+
+/* Estilos para la sección de comentarios */
+#comments {
+    margin-top: 20px;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+#comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#comment-form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#comment-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1e90ff;
+    color: white;
+    cursor: pointer;
+}
+
+#comment-form button:hover {
+    background-color: #0d6efd;
+}
+
+#comment-list p {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
 input, textarea {
     padding: 10px;
     border: 1px solid #ddd;

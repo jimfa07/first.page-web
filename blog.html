@@ -13,7 +13,7 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  
+
   gtag('config', 'G-7M0WYD3RNG');
 </script>
 </head>
@@ -33,6 +33,15 @@
         <h2>Blog</h2>
         <section id="blog-posts">
             <!-- Aquí se cargarán los posts del blog -->
+        </section>
+        <section id="comments">
+            <h3>Comentarios</h3>
+            <form id="comment-form">
+                <label for="comment">Añadir comentario:</label>
+                <textarea id="comment" name="comment" required></textarea>
+                <button type="submit">Comentar</button>
+            </form>
+            <div id="comment-list"></div>
         </section>
     </main>
     <footer>

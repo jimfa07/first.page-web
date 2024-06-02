@@ -39,3 +39,18 @@ document.addEventListener('DOMContentLoaded', () => {
         blogPostsContainer.appendChild(postElement);
     });
 });
+
+const commentForm = document.getElementById('comment-form');
+    const commentList = document.getElementById('comment-list');
+
+    commentForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const comment = commentForm.comment.value;
+
+        const commentElement = document.createElement('p');
+        commentElement.textContent = comment;
+
+        commentList.appendChild(commentElement);
+        commentForm.reset();
+    });
+});
