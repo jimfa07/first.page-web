@@ -1,174 +1,125 @@
-/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
+    background-color: #f4f4f4;
     color: #333;
 }
 
 header {
-    background: #35424a;
+    background: #333;
     color: #fff;
-    padding: 20px 0;
+    padding: 10px 0;
     text-align: center;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5em;
 }
 
 nav ul {
-    padding: 0;
     list-style: none;
-    background: #35424a;
-    display: flex;
-    justify-content: center;
-    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
 nav ul li {
-    margin: 0 15px;
+    display: inline;
+    margin: 0 10px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.1em;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
 }
 
 main {
     padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-    font-size: 2em;
+    color: #333;
+}
+
+article {
+    background: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+article h3 {
     margin-top: 0;
 }
 
-section {
-    margin-bottom: 20px;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #35424a;
-    color: #fff;
-    margin-top: 20px;
-}
-
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    background: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-form input, form button {
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input,
+form textarea {
+    width: 100%;
     padding: 10px;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
 form button {
-    background: #35424a;
+    padding: 10px 20px;
+    background: #333;
     color: #fff;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 
 form button:hover {
-    background: #45a049;
+    background: #555;
 }
 
-/* Blog post styles */
-#blog-posts article {
-    margin-bottom: 20px;
-    padding: 15px;
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-#blog-posts h3 {
-    margin-top: 0;
-}
-
-/* Comment section styles */
-#comments {
-    margin-top: 40px;
-}
-
-#comments h3 {
-    margin-bottom: 10px;
-}
-
-#comments form {
-    margin-bottom: 20px;
-}
-
-#comments p {
-    background: #e4e4e4;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-/* Subscribe section styles */
-#subscribe {
-    background: #f9f9f9;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+footer {
+    background: #333;
+    color: #fff;
     text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
 
-#subscribe h3 {
-    margin-bottom: 20px;
+#subscribe,
+#comments {
+    background: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#subscribe form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#subscribe h3,
+#comments h3 {
+    margin-top: 0;
 }
 
-#subscribe input {
-    width: 70%;
-    max-width: 300px;
-    margin-bottom: 10px;
-}
-
-#subscribe button {
-    width: 70%;
-    max-width: 300px;
-}
-/* New styles for phrases and books sections */
-#frases p, #libros p {
-    background: #e4e4e4;
+#comment-list p {
+    background: #f4f4f4;
     padding: 10px;
     border-radius: 5px;
-    margin-bottom: 10px;
-}
-/* Estilos específicos para las páginas de frases y libros */
-article {
-    margin-bottom: 20px;
-    padding: 15px;
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    margin: 10px 0;
 }
 
-article h3 {
-    margin-top: 0;
+.post-date {
+    font-size: 0.9em;
+    color: #777;
 }

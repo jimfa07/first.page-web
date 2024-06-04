@@ -1,62 +1,64 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const posts = [
-        {
-            title: "El Camino al Éxito",
-            content: "El éxito no es el destino, sino el viaje. A lo largo de este viaje, enfrentaremos desafíos y adversidades, pero cada paso nos acerca más a nuestras metas. La clave está en la perseverancia y la disciplina."
-        },
-        {
-            title: "La Importancia de la Disciplina",
-            content: "La disciplina es la base de todo éxito duradero. Sin disciplina, las metas se vuelven solo sueños inalcanzables. Es importante establecer rutinas y hábitos que nos lleven hacia nuestros objetivos."
-        },
-        {
-            title: "Motivación Diaria",
-            content: "La motivación puede ser efímera, pero la inspiración constante nos mantiene en el camino. Rodéate de personas y entornos que te impulsen a ser mejor cada día."
-        },
-        {
-            title: "Desarrollo Personal y Negocios",
-            content: "El desarrollo personal es crucial para el éxito en los negocios. Invertir en uno mismo, adquirir nuevas habilidades y conocimientos, y mantener una mentalidad positiva son fundamentales para prosperar en el mundo empresarial."
-        },
-        {
-            title: "Ejemplos de Superación Personal",
-            content: "Historias inspiradoras de personas que han superado grandes obstáculos en su vida. Estos ejemplos nos muestran que con determinación y esfuerzo, cualquier meta es alcanzable."
-        }
-    ];
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Inspiración Constante</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="canonical" href="https://inspiracionconstante.com/blog.html">
+    <meta name="description" content="Lee los últimos artículos sobre superación personal, motivación y disciplina en el blog de Inspiración Constante.">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7M0WYD3RNG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-7M0WYD3RNG');
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Inspiración Constante</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="exito-disciplina.html">Éxito y Disciplina</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="frases.html" target="_blank">Frases</a></li>
+                <li><a href="libros.html" target="_blank">Libros</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Blog</h2>
+        <section id="blog-posts">
+            <!-- Aquí se cargarán los posts del blog -->
+        </section>
 
-    const blogPostsContainer = document.getElementById('blog-posts');
+        <!-- Formulario de suscripción -->
+        <section id="subscribe">
+            <h3>Suscríbete a nuestro boletín</h3>
+            <form id="subscribe-form">
+                <input type="email" id="email" name="email" placeholder="Ingresa tu correo electrónico" required>
+                <button type="submit">Suscribirse</button>
+            </form>
+            <p id="subscribe-message"></p>
+        </section>
 
-    posts.forEach(post => {
-        const postElement = document.createElement('article');
-
-        const postTitle = document.createElement('h3');
-        postTitle.textContent = post.title;
-
-        const postContent = document.createElement('p');
-        postContent.textContent = post.content;
-
-        postElement.appendChild(postTitle);
-        postElement.appendChild(postContent);
-
-        blogPostsContainer.appendChild(postElement);
-    });
-});
-
-const subscribeForm = document.getElementById('subscribe-form');
-const subscribeMessage = document.getElementById('subscribe-message');
-
-subscribeForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const email = document.getElementById('email').value;
-    subscribeMessage.textContent = `Gracias por suscribirte con ${email}.`;
-});
-
-const commentForm = document.getElementById('comment-form');
-const commentList = document.getElementById('comment-list');
-
-commentForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const comment = document.getElementById('comment').value;
-    const commentElement = document.createElement('p');
-    commentElement.textContent = comment;
-    commentList.appendChild(commentElement);
-    commentForm.reset();
-});
+        <!-- Sección de comentarios -->
+        <section id="comments">
+            <h3>Comentarios</h3>
+            <div id="comment-list"></div>
+            <form id="comment-form">
+                <input type="text" id="comment" name="comment" placeholder="Escribe tu comentario" required>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Inspiración Constante. Todos los derechos reservados.</p>
+    </footer>
+    <script src="blog.js"></script>
+</body>
+</html>
