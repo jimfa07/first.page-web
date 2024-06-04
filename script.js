@@ -45,3 +45,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// Obtener el enlace de "Frases" y el submenú
+const frasesLink = document.getElementById('frases-link');
+const submenuFrases = document.getElementById('submenu-frases');
+
+// Mostrar el submenú al pasar el ratón sobre el enlace de "Frases"
+frasesLink.addEventListener('mouseover', () => {
+    submenuFrases.style.display = 'block';
+});
+
+// Ocultar el submenú al quitar el ratón del enlace de "Frases"
+frasesLink.addEventListener('mouseout', () => {
+    submenuFrases.style.display = 'none';
+});
+
+// Mostrar el submenú al pasar el ratón sobre el submenú mismo
+submenuFrases.addEventListener('mouseover', () => {
+    submenuFrases.style.display = 'block';
+});
+
+// Ocultar el submenú al quitar el ratón del submenú mismo
+submenuFrases.addEventListener('mouseout', () => {
+    submenuFrases.style.display = 'none';
+});
