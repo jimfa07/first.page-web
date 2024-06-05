@@ -9,8 +9,12 @@ body {
 header {
     background: #333;
     color: #fff;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 header h1 {
@@ -20,21 +24,30 @@ header h1 {
 nav ul {
     list-style: none;
     padding: 0;
-    text-align: center;
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 10px;
+    margin: 0 15px;
+    position: relative;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    padding: 10px;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: #555;
+    border-radius: 5px;
 }
 
 main {
-    padding: 20px;
+    padding: 80px 20px 20px;
 }
 
 h2 {
@@ -123,11 +136,15 @@ footer {
     font-size: 0.9em;
     color: #777;
 }
+
 .submenu {
     display: none;
     position: absolute;
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    margin-top: 10px;
+    z-index: 10;
+    border-radius: 5px;
 }
 
 .submenu a {
@@ -137,6 +154,7 @@ footer {
     text-decoration: none;
 }
 
-.submenu a:hover {
+.submenu a:hover,
+.submenu a:focus {
     background-color: #f4f4f4;
 }

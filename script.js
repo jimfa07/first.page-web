@@ -8,63 +8,48 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     const libros = [
-        { title: "Los 7 Hábitos de la Gente Altamente Efectiva", author: "Stephen R. Covey" },
-        { title: "Cómo Ganar Amigos e Influir sobre las Personas", author: "Dale Carnegie" },
-        { title: "Piense y Hágase Rico", author: "Napoleon Hill" },
-        { title: "El Poder del Ahora", author: "Eckhart Tolle" },
-        { title: "Despierta tu Héroe Interior", author: "Victor Hugo Manzanilla" }
+        "Los 7 hábitos de la gente altamente efectiva - Stephen R. Covey",
+        "Cómo ganar amigos e influir sobre las personas - Dale Carnegie",
+        "Piense y hágase rico - Napoleon Hill",
+        "El poder del ahora - Eckhart Tolle",
+        "Hábitos atómicos - James Clear"
     ];
 
     const frasesContainer = document.getElementById('frases');
     const librosContainer = document.getElementById('libros');
 
     frases.forEach(frase => {
-        const fraseElement = document.createElement('p');
-        fraseElement.textContent = frase;
-        frasesContainer.appendChild(fraseElement);
+        const p = document.createElement('p');
+        p.textContent = frase;
+        frasesContainer.appendChild(p);
     });
 
     libros.forEach(libro => {
-        const libroElement = document.createElement('p');
-        libroElement.innerHTML = `<strong>${libro.title}</strong> por ${libro.author}`;
-        librosContainer.appendChild(libroElement);
+        const p = document.createElement('p');
+        p.textContent = libro;
+        librosContainer.appendChild(p);
     });
 
-    // Código para la suscripción
-    const subscribeForm = document.getElementById('subscribe-form');
-    const subscribeMessage = document.getElementById('subscribe-message');
-
-    subscribeForm.addEventListener('submit', (e) => {
+    document.getElementById('subscribe-form').addEventListener('submit', (e) => {
         e.preventDefault();
-        const email = subscribeForm.email.value;
-
-        // Aquí puedes añadir la lógica para enviar el correo a tu servidor
-        // Para este ejemplo, solo mostramos un mensaje de éxito
-        subscribeMessage.textContent = `¡Gracias por suscribirte, ${email}!`;
-        subscribeForm.reset();
+        const email = document.getElementById('email').value;
+        document.getElementById('subscribe-message').textContent = `¡Gracias por suscribirte, ${email}!`;
+        e.target.reset();
     });
-});
 
-// Obtener el enlace de "Frases" y el submenú
-const frasesLink = document.getElementById('frases-link');
-const submenuFrases = document.getElementById('submenu-frases');
+    document.querySelectorAll('nav ul li a[target="_blank"]').forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            window.open(this.href);
+        });
+    });
 
-// Mostrar el submenú al pasar el ratón sobre el enlace de "Frases"
-frasesLink.addEventListener('mouseover', () => {
-    submenuFrases.style.display = 'block';
-});
+    const submenuFrases = document.getElementById('submenu-frases');
+    document.querySelector('nav ul li a[href="frases.html"]').addEventListener('mouseover', () => {
+        submenuFrases.style.display = 'block';
+    });
 
-// Ocultar el submenú al quitar el ratón del enlace de "Frases"
-frasesLink.addEventListener('mouseout', () => {
-    submenuFrases.style.display = 'none';
-});
-
-// Mostrar el submenú al pasar el ratón sobre el submenú mismo
-submenuFrases.addEventListener('mouseover', () => {
-    submenuFrases.style.display = 'block';
-});
-
-// Ocultar el submenú al quitar el ratón del submenú mismo
-submenuFrases.addEventListener('mouseout', () => {
-    submenuFrases.style.display = 'none';
+    submenuFrases.addEventListener('mouseleave', () => {
+        submenuFrases.style.display = 'none';
+    });
 });
