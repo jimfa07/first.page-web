@@ -5,11 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frases de Negocios - Inspiración Constante</title>
     <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Descubre frases inspiradoras para motivarte a alcanzar el éxito.">
+    <meta name="keywords" content="frases de negocios, motivación, éxito empresarial, inspiración, Richard Branson, Warren Buffett, Bill Gates">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7M0WYD3RNG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-7M0WYD3RNG');
+    </script>
     <style>
         body {
-            background-color: #000;
-            color: #fff;
-            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
         }
@@ -17,40 +27,80 @@
         header {
             background: #333;
             color: #fff;
-            padding: 10px 0;
+            padding: 20px 0;
             text-align: center;
         }
 
         header h1 {
             margin: 0;
+            font-size: 2em;
         }
 
         main {
             padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         h2 {
             color: #fff;
             text-align: center;
+            font-size: 1.5em;
+            margin-bottom: 20px;
         }
 
         .quote {
             background: rgba(255, 255, 255, 0.1);
             padding: 20px;
             margin: 20px 0;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .quote:hover {
+            transform: scale(1.05);
         }
 
         .quote p {
             margin: 0;
             font-style: italic;
+            font-size: 1.2em;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Inspiración Constante</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="exito-disciplina.html">Éxito y Disciplina</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="frases.html">Frases</a>
+                    <ul id="submenu-frases" class="submenu">
+                        <li><a href="f-negocios.html">Negocios</a></li>
+                        <li><a href="f-exito.html">Éxito</a></li>
+                    </ul>
+                </li>
+                <li><a href="libros.html">Libros</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <h2>Frases Inspiradoras - Negocios</h2>
@@ -67,8 +117,20 @@
             <p>"El éxito empresarial radica en saber convertir las adversidades en oportunidades." - Bill Gates.</p>
         </div>
 
-        <!-- Agrega el resto de las citas aquí -->
+        <div class="quote">
+            <p>"El mayor riesgo es no tomar ningún riesgo. En un mundo que cambia tan rápidamente, la única estrategia que está garantizada para fracasar es no asumir riesgos." - Mark Zuckerberg.</p>
+        </div>
 
+        <div class="quote">
+            <p>"No se trata de tener las mejores ideas, sino de hacer que las cosas sucedan." - Steve Jobs.</p>
+        </div>
+
+        <div class="quote">
+            <p>"El éxito no es la clave de la felicidad. La felicidad es la clave del éxito. Si amas lo que haces, tendrás éxito." - Albert Schweitzer.</p>
+        </div>
+
+        <!-- Agrega el resto de las citas aquí -->
+       
     </main>
     <footer>
         <p>&copy; 2024 Inspiración Constante. Todos los derechos reservados.</p>
